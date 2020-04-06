@@ -9,3 +9,5 @@ This project is part of YouTube tutorial series on React Navigation 5. Here I ha
 - [Material Bottom Tab Navigator Tutorial](https://youtu.be/RSzITFbOtpQ)
 - [Custom Drawer Navigator Tutorial](https://youtu.be/ayxRtBHw754)
 
+# Project Demo
+![React Navigation v5 Mix App Demo](https://raw.githubusercontent.com/itzpradip/react-navigation-v5-mix/master/app-interaction-demo.gif)
