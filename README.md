@@ -4,10 +4,13 @@ This project is part of YouTube tutorial series on React Navigation 5. Here I ha
 
 # YouTube Video List
 - [Complete React Navigation v5 Playlist](https://www.youtube.com/playlist?list=PLQWFhX-gwJbmmqcP-9zMXBaxQbGKfIJY2)
-- [Stack Navigator Tutorial](https://youtu.be/a9jSyZXYGn8)
-- [Drawer Navigator Tutorial](https://youtu.be/2Tj9y8lfiyo)
-- [Material Bottom Tab Navigator Tutorial](https://youtu.be/RSzITFbOtpQ)
+- [Login Authentication Tutorial by Using AsyncStorage](https://youtu.be/gvF6sFIPfsQ)
+- [Login & Signup Screen UI Design Tutorial](https://youtu.be/Rs72pRwXIzA)
 - [Custom Drawer Navigator Tutorial](https://youtu.be/ayxRtBHw754)
+- [Material Bottom Tab Navigator Tutorial](https://youtu.be/RSzITFbOtpQ)
+- [Drawer Navigator Tutorial](https://youtu.be/2Tj9y8lfiyo)
+- [Stack Navigator Tutorial](https://youtu.be/a9jSyZXYGn8)
+
 
 # Project Demo
 ![React Navigation v5 Mix App Demo](https://raw.githubusercontent.com/itzpradip/react-navigation-v5-mix/master/app-interaction-demo.gif)

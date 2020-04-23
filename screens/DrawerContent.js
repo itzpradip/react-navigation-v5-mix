@@ -15,11 +15,15 @@ import {
     DrawerItem
 } from '@react-navigation/drawer';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import{ AuthContext } from '../components/context';
 
 export function DrawerContent(props) {
 
     const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+
+    const { signOut } = React.useContext(AuthContext);
 
     const toggleTheme = () => {
         setIsDarkTheme(!isDarkTheme);
@@ -33,7 +37,7 @@ export function DrawerContent(props) {
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
                                 source={{
-                                    uri: 'https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/52944323_2091549364214714_3093923968491454464_n.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_ohc=Pn8ws2O3PBQAX-AocWT&_nc_ht=scontent-maa2-1.xx&oh=862e49d69b74e8bd16f3b4166d4eda1e&oe=5E9B4BFE'
+                                    uri: 'https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/52944323_2091549364214714_3093923968491454464_n.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_ohc=F1DSkxvNhw8AX89gyAQ&_nc_ht=scontent.fccu3-1.fna&oh=f5ef48dc15731b42c5e246ecdbe4fff5&oe=5EC2D8FE'
                                 }}
                                 size={50}
                             />
@@ -134,7 +138,7 @@ export function DrawerContent(props) {
                         />
                     )}
                     label="Sign Out"
-                    onPress={() => {}}
+                    onPress={() => {signOut()}}
                 />
             </Drawer.Section>
         </View>
