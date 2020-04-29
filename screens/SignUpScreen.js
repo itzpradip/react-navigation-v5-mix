@@ -7,7 +7,8 @@ import {
     Dimensions,
     TextInput,
     Platform,
-    StyleSheet ,
+    StyleSheet,
+    ScrollView,
     StatusBar
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
@@ -80,6 +81,7 @@ const SignInScreen = ({navigation}) => {
             animation="fadeInUpBig"
             style={styles.footer}
         >
+            <ScrollView>
             <Text style={styles.text_footer}>Username</Text>
             <View style={styles.action}>
                 <FontAwesome 
@@ -211,6 +213,7 @@ const SignInScreen = ({navigation}) => {
                     }]}>Sign In</Text>
                 </TouchableOpacity>
             </View>
+            </ScrollView>
         </Animatable.View>
       </View>
     );
@@ -230,7 +233,7 @@ const styles = StyleSheet.create({
         paddingBottom: 50
     },
     footer: {
-        flex: 3,
+        flex: Platform.OS === 'ios' ? 3 : 5,
         backgroundColor: '#fff',
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,

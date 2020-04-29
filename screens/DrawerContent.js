@@ -37,13 +37,13 @@ export function DrawerContent(props) {
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
                                 source={{
-                                    uri: 'https://scontent.fccu3-1.fna.fbcdn.net/v/t1.0-9/52944323_2091549364214714_3093923968491454464_n.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_ohc=F1DSkxvNhw8AX89gyAQ&_nc_ht=scontent.fccu3-1.fna&oh=f5ef48dc15731b42c5e246ecdbe4fff5&oe=5EC2D8FE'
+                                    uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
                                 }}
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>Pradip Debnath</Title>
-                                <Caption style={styles.caption}>@itzpradip</Caption>
+                                <Title style={styles.title}>John Doe</Title>
+                                <Caption style={styles.caption}>@j_doe</Caption>
                             </View>
                         </View>
 
