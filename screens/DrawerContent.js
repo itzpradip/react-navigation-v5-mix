@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import {
+    useTheme,
     Avatar,
     Title,
     Caption,
@@ -21,13 +22,9 @@ import{ AuthContext } from '../components/context';
 
 export function DrawerContent(props) {
 
-    const [isDarkTheme, setIsDarkTheme] = React.useState(false);
+    const paperTheme = useTheme();
 
-    const { signOut } = React.useContext(AuthContext);
-
-    const toggleTheme = () => {
-        setIsDarkTheme(!isDarkTheme);
-    }
+    const { signOut, toggleTheme } = React.useContext(AuthContext);
 
     return(
         <View style={{flex:1}}>
@@ -121,7 +118,7 @@ export function DrawerContent(props) {
                             <View style={styles.preference}>
                                 <Text>Dark Theme</Text>
                                 <View pointerEvents="none">
-                                    <Switch value={isDarkTheme}/>
+                                    <Switch value={paperTheme.dark}/>
                                 </View>
                             </View>
                         </TouchableRipple>

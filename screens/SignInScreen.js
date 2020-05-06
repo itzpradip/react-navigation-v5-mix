@@ -14,6 +14,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
+import { useTheme } from 'react-native-paper';
+
 import { AuthContext } from '../components/context';
 
 import Users from '../model/users';
@@ -28,6 +30,8 @@ const SignInScreen = ({navigation}) => {
         isValidUser: true,
         isValidPassword: true,
     });
+
+    const { colors } = useTheme();
 
     const { signIn } = React.useContext(AuthContext);
 
@@ -116,18 +120,25 @@ const SignInScreen = ({navigation}) => {
         </View>
         <Animatable.View 
             animation="fadeInUpBig"
-            style={styles.footer}
+            style={[styles.footer, {
+                backgroundColor: colors.background
+            }]}
         >
-            <Text style={styles.text_footer}>Username</Text>
+            <Text style={[styles.text_footer, {
+                color: colors.text
+            }]}>Username</Text>
             <View style={styles.action}>
                 <FontAwesome 
                     name="user-o"
-                    color="#05375a"
+                    color={colors.text}
                     size={20}
                 />
                 <TextInput 
                     placeholder="Your Username"
-                    style={styles.textInput}
+                    placeholderTextColor="#666666"
+                    style={[styles.textInput, {
+                        color: colors.text
+                    }]}
                     autoCapitalize="none"
                     onChangeText={(val) => textInputChange(val)}
                     onEndEditing={(e)=>handleValidUser(e.nativeEvent.text)}
@@ -152,18 +163,22 @@ const SignInScreen = ({navigation}) => {
             
 
             <Text style={[styles.text_footer, {
+                color: colors.text,
                 marginTop: 35
             }]}>Password</Text>
             <View style={styles.action}>
                 <Feather 
                     name="lock"
-                    color="#05375a"
+                    color={colors.text}
                     size={20}
                 />
                 <TextInput 
                     placeholder="Your Password"
+                    placeholderTextColor="#666666"
                     secureTextEntry={data.secureTextEntry ? true : false}
-                    style={styles.textInput}
+                    style={[styles.textInput, {
+                        color: colors.text
+                    }]}
                     autoCapitalize="none"
                     onChangeText={(val) => handlePasswordChange(val)}
                 />
