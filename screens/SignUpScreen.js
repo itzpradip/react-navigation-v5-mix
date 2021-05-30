@@ -162,7 +162,7 @@ const SignInScreen = ({navigation}) => {
                 <TouchableOpacity
                     onPress={updateConfirmSecureTextEntry}
                 >
-                    {data.secureTextEntry ? 
+                    {data.confirm_secureTextEntry ? 
                     <Feather 
                         name="eye-off"
                         color="grey"
