@@ -72,7 +72,7 @@ const App = () => {
 
   const theme = isDarkTheme ? CustomDarkTheme : CustomDefaultTheme;
 
-  const loginReducer = (prevState, action) => {
+  const loginReducer = (prevState: any, action: { type: any; token: any; id: any; }) => {
     switch( action.type ) {
       case 'RETRIEVE_TOKEN': 
         return {
@@ -107,7 +107,7 @@ const App = () => {
   const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState);
 
   const authContext = React.useMemo(() => ({
-    signIn: async(foundUser) => {
+    signIn: async(foundUser: any) => {
       // setUserToken('fgkj');
       // setIsLoading(false);
       const userToken = String(foundUser[0].userToken);
@@ -167,7 +167,7 @@ const App = () => {
     <AuthContext.Provider value={authContext}>
     <NavigationContainer theme={theme}>
       { loginState.userToken !== null ? (
-        <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
+        <Drawer.Navigator drawerContent={(props: any) => <DrawerContent {...props} />}>
           <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
@@ -175,7 +175,7 @@ const App = () => {
         </Drawer.Navigator>
       )
     :
-      <RootStackScreen/>
+      <RootStackScreen navigation={undefined}/>
     }
     </NavigationContainer>
     </AuthContext.Provider>
